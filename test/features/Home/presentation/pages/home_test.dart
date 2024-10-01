@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:test_bloc_feature/features/Home/domain/entities/get_anime_response_entities.dart';
 import 'package:test_bloc_feature/features/Home/presentation/bloc/home_bloc.dart';
 import 'package:test_bloc_feature/features/Home/presentation/bloc/home_state.dart';
 import 'package:test_bloc_feature/features/Home/presentation/pages/home.dart';
 import 'package:test_bloc_feature/features/Home/presentation/widgets/anime_grid_item.dart';
 
 import '../../mocks/get_anime_mocks.dart';
+import '../../mocks/mock_data_for_test.dart';
 
 void main() {
   late MockHomeBloc mockHomeBloc;
@@ -47,21 +47,11 @@ void main() {
 
     testWidgets('shows AnimeGridItem when state is loaded',
         (WidgetTester tester) async {
-      // Arrange: Create a mock anime list and mock the loaded state
-      final mockAnimeList = [
-        const GetAnimeResponseEntities(
-          slug: '1',
-          description: 'Naruto description',
-          canonicalTitle: 'Naruto',
-          posterImage: 'posterImage',
-          coverImage: 'coverImage',
-        ),
-      ];
-
       when(() => mockHomeBloc.stream).thenAnswer((_) => Stream.value(
-          HomeState.loaded(getAnimeResponseEntities: mockAnimeList)));
-      when(() => mockHomeBloc.state).thenReturn(
-          HomeState.loaded(getAnimeResponseEntities: mockAnimeList));
+          const HomeState.loaded(
+              getAnimeResponseEntities: MockDataForTest.mockAnimeList)));
+      when(() => mockHomeBloc.state).thenReturn(const HomeState.loaded(
+          getAnimeResponseEntities: MockDataForTest.mockAnimeList));
 
       // Act: Pump the widget
       await tester.pumpWidget(createWidgetUnderTest());

@@ -9,8 +9,6 @@ import 'package:test_bloc_feature/features/Home/presentation/bloc/home_state.dar
 import '../../mocks/mock_data_for_test.dart';
 import '../../mocks/get_anime_mocks.dart';
 
-// Mocking the GetAnimeUseCase
-
 void main() {
   late HomeBloc homeBloc;
   late MockGetAnimeUseCase mockGetAnimeUseCase;
