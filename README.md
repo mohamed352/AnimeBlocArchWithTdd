@@ -1,16 +1,18 @@
-# test_bloc_feature
+# BlocAnimeTDD
 
-A new Flutter project.
+BlocAnimeTDD is a simple yet powerful Flutter application that fetches a list of anime series while adhering to Clean Architecture principles and utilizing Bloc for state management. The project is built with a focus on Test-Driven Development (TDD), ensuring robustness and maintainability through comprehensive unit, widget, and bloc tests.
 
-## Getting Started
+## Features
+- Fetches and displays a list of anime series.
+- Implements Bloc for state management, ensuring efficient handling of loading, success, and error states.
+- Structured following Clean Architecture principles for scalability and maintainability.
+- Test-Driven Development (TDD) approach with unit and widget tests.
+- Fully modularized and easily extensible for future development.
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+To run this project locally, follow these steps:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mohamed352/AnimeBlocArchWithTdd.git
