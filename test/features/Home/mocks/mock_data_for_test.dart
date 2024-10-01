@@ -12,19 +12,4 @@ final class MockDataForTest {
         posterImage: 'posterImage',
         coverImage: 'posterImage')
   ];
-  static const jsonMock = {
-    'id': '123',
-    'attributes': {
-      'canonicalTitle': 'Attack on Titan',
-    },
-    'links': {
-      'self': 'https://example.com/anime/123',
-    },
-  };
-  static const jsonMockWithNullFields = {
-        'id': null,
-        'attributes': null,
-        'links': null,
-        'relationships': null,
-      };
 }
